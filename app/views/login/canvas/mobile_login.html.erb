@@ -20,7 +20,7 @@
 
 <% extend Api::V1::Account %>
 
-  <div class="mobileLogin-Header">
+  <div class="mobileLogin-Header" style="background-image: url(COMPANY_LOGO_MOBILE) !important;">
     <span class="screenreader-only">
       <%= t 'Canvas by Instructure' %>
       <script type="text/javascript">
@@ -67,6 +67,12 @@
     class="Button Button--primary Button--block"><%= t('log_in', 'Log In') %>
   </button>
 
+  
+  <button type="button" class="Button Button--primary Button--block"  onclick="window.open('COMPANY_ENROLLMENT_LINK')"  class="Button Button--login">
+  Online Enrollment 
+  </button>
+
+  
   <% if request.post? && flash[:error] %>
     <div aria-hidden="true" class="error"><%= flash[:error] %></div>
   <% end %>
